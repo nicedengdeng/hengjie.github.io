@@ -1,0 +1,99 @@
+/* 导航栏 */
+
+#navbar {
+	margin-top: 1em;
+}
+
+.navfloat {
+	width: 100%;
+	position: absolute;
+	_position: absolute;
+	top: 0px;
+	z-index: 999;
+}
+
+.logo {
+	margin-top: 0.5em;
+}
+
+.nav a {
+	color: white;
+}
+
+.nav a:hover {
+	color: blue;
+	background: none;
+}
+
+#navbar ul li a:hover {
+	background: none;
+}
+
+.nav ul li a:hover {
+	height: 0px;
+	text-decoration: none;
+	background-color: #000000;
+}
+
+
+/*广告栏*/
+
+#swiper-container img {
+	height: 100%;
+	width: 100%;
+}
+
+.fontSize {
+	font-size: 13px;
+	font-family: "微软雅黑";
+}
+
+
+/*助手栏*/
+
+.site-assistant {
+	align-content: center;
+	float: right;
+	margin-top: -64px;
+	margin-right: -70px;
+	width: 100px;
+	height: 100px;
+}
+
+#assistant {
+	position: relative;
+	width: 79px;
+}
+
+.assistant {
+	position: absolute;
+	z-index: 1000;
+	top: 2px;
+	left: 1228px;
+	width: 79px;
+	height: 0px;
+	-webkit-transition: height ease 1s;
+	transition: height ease 1s;
+	display: none;
+}
+
+.assistant:hover {
+	display: block;
+}
+
+.assistant ul {
+	background: white;
+	opacity: 0.6;
+}
+
+.assistant ul li {
+	list-style: none;
+	width: 79px;
+	height: 86px;
+}
+
+.assistant #remove {
+	margin-left: -20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+}

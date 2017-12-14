@@ -1,0 +1,279 @@
+/*产品栏*/
+
+.product {
+	background: white;
+	font-family: "微软雅黑";
+	font-size: 10px;
+	height: 100px;
+	color: darkgray;
+}
+
+.product a {
+	color: darkgray;
+	text-decoration: none;
+}
+
+.product a:hover {
+	color: #ADD8E6;
+	text-decoration: none;
+}
+
+.product-list {
+	margin-left: 25px;
+}
+
+.product-list ul {
+	list-style: none;
+	float: left;
+}
+
+.product-list ul li {
+	list-style: none;
+	float: left;
+}
+
+.product-room {
+	margin: 60px 10px;
+	height: 80px;
+	width: 100px;
+	border-left: dashed 1px darkgray;
+	cursor: pointer;
+}
+
+.product-room .title {
+	margin-left: 28px;
+}
+
+.product-room img {
+	margin-bottom: 20px;
+}
+
+.product-room dl {
+	-webkit-transition: height ease 1s;
+	transition: height ease 1s;
+	height: 0px;
+	display: none;
+}
+
+.product-room dl dd {}
+
+.product-room:hover dl {
+	cursor: pointer;
+	margin-left: 28px;
+	-webkit-transition: height ease 1s;
+	transition: height ease 1s;
+	height: 80px;
+	display: block;
+}
+
+
+/*智能坐便器广告栏*/
+
+.zhineng {
+	position: relative;
+	margin-top: 100px;
+}
+
+.zhineng .btn-a {
+	position: absolute;
+	bottom: 190px;
+	right: 440px;
+	width: 100px;
+	background: #1A355E;
+	color: white;
+}
+
+
+/*榜单栏*/
+
+.bangdan {
+	position: relative;
+	width: 100%;
+	background: url(../img/index-img2.jpg) no-repeat;
+}
+
+.bestseller-list-title {
+	position: absolute;
+	top: -550px;
+	left: 150px;
+}
+
+.bestseller-list {
+	position: absolute;
+	top: -400px;
+	left: 122px;
+}
+
+.bestseller-list div img {
+	margin: 30px;
+}
+
+.bestseller-list .sell-one {
+	position: absolute;
+	top: 30px;
+	left: 45px;
+	width: 85%;
+	background: #203656;
+	opacity: 0;
+	font-family: "微软雅黑";
+	font-size: smaller;
+	color: white;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	pointer-events: none;
+}
+
+#sell-one:hover .sell-one {
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.8;
+	pointer-events: auto;
+}
+
+.bestseller-list .sell-two {
+	position: absolute;
+	top: 30px;
+	left: 46px;
+	width: 85%;
+	background: #203656;
+	opacity: 0;
+	font-family: "微软雅黑";
+	font-size: smaller;
+	color: white;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	pointer-events: none;
+}
+
+#sell-two:hover .sell-two {
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.8;
+	pointer-events: auto;
+}
+
+.bestseller-list .sell-three {
+	position: absolute;
+	top: 202px;
+	left: 45px;
+	width: 85%;
+	background: #203656;
+	opacity: 0;
+	font-family: "微软雅黑";
+	font-size: smaller;
+	color: white;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	pointer-events: none;
+}
+
+#sell-three:hover .sell-three {
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.8;
+	pointer-events: auto;
+}
+
+.bestseller-list .sell-four {
+	position: absolute;
+	top: 202px;
+	left: 46px;
+	width: 85%;
+	background: #203656;
+	opacity: 0;
+	font-family: "微软雅黑";
+	font-size: smaller;
+	color: white;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	pointer-events: none;
+}
+
+#sell-four:hover .sell-four {
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.8;
+	pointer-events: auto;
+}
+
+.bangdan .Q8 {
+	position: absolute;
+	top: -552px;
+	right: -100px;
+}
+
+.bangdan .Q8 .Q8-title {
+	position: absolute;
+	top: -10px;
+	color: white;
+}
+
+
+/*<!-- 恒洁介绍 start-->*/
+
+.hengjie-introduce {
+	position: relative;
+}
+
+.hengjie-introduce .pic-massage1 {
+	position: absolute;
+	bottom: 50px;
+	height: 16%;
+	width: 92%;
+	color: white;
+	background: #142E58;
+	text-align: center;
+	opacity: 0.6;
+	font-family: "微软雅黑";
+}
+
+.hengjie-introduce .pic-massage2 {
+	position: absolute;
+	bottom: 50px;
+	height: 16%;
+	width: 92%;
+	color: white;
+	background: #142E58;
+	text-align: center;
+	opacity: 0.6;
+	font-family: "微软雅黑";
+}
+
+.icon .tip {
+	position: absolute;
+	height: 100%;
+	width: 88%;
+	background-color: #173565;
+	text-align: center;
+	font-family: "微软雅黑";
+	color: white;
+	cursor: pointer;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.icon .tip p {
+	margin-top: 100px;
+}
+
+.icon:hover .tip {
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0;
+	pointer-events: auto;
+}
+
+
+/*
+			.icon .tip{-webkit-transition:opacity 0.5s 1s;  opacity:0; pointer-events:none;}
+	
+	        .icon:hover .tip{-webkit-transition:opacity 0.5s; opacity:1; pointer-events:auto;}
+	
+			.icon .tip:hover{-webkit-transition:none;}
+			
+			第一行CSS：tip的初始状态，transition-property: opacity，transition-duration: 0.5s，transition-delay: 1s，当鼠标移出tip时会触发这行样式，tip会在1s后变成透明，并有一个0.5s的渐隐过程。当元素透明时，虽然看不见了，但仍然存在于页面上，会盖住其下的元素，使可见的元素看得见却不能操作，所以我们tip加一个pointer-events:none 使tip的鼠标事件无效，相当于真的变成了透明的。
+			第二行CSS：icon hover时，把延迟的1s去掉，tip马上渐现出来，并且把pointer-events设置为auto，使其可以正常地操作。
+			第三行CSS：当鼠标在tip上时，去掉transition动画效果，否则它会执行第一行CSS，在1s后变成透明。
+			 */

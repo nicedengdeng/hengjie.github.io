@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+
+				<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- 引入angular -->
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="" ng-app="myApp">
+			<div class="container" ng-controller="cartControler">
+				<table class="table" style="overflow: hidden;" ng-show="carts.length">
+					<thead>
+						<tr>
+							<th>产品编号</th>
+							<th>产品名字</th>
+							<th>购买数量</th>
+							<th>产品单价</th>
+							<th>产品总价</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="cart in carts">
+							<td ng-bind="cart.id"></td>
+							<td ng-bind="cart.name"></td>
+							<td>
+								<button class="btn btn-info" ng-click="add(cart.id)">+</button>
+								<input type="text" ng-model="cart.quantity" class="text-center" />
+								<button class="btn btn-info" ng-click="delete(cart.id)">-</button>
+								<span ng-show="cart.quantity==100">最多买100件</span>
+								<span ng-show="cart.quantity==0">最少买1件</span>
+							</td>
+							<td ng-bind="cart.price| currency:'￥'"></td>
+							<td ng-bind="cart.quantity*cart.price | currency:'￥'"></td>
+							<td>
+								<div class="btn btn-danger" ng-click="remove(cart.id)">移除</div>
+							</td>
+						</tr>
+						<tr>
+							<td>购买总价:</td>
+							<td ng-bind="totalPrice()| currency:'￥'"></td>
+							<td>总购买数量:</td>
+							<td>{{totalNumber()}}件</td>
+							<td colspan="2">
+								<div class="btn btn-danger" style="" ng-click="removeCart()">清空购物车</div>
+								<div class="btn btn-danger" style="margin: 0 50px;" data-toggle="modal" data-target="#myModal">增加种类</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="" ng-hide="carts.length">
+					<h1 class="text-justify text-center">您的购物车为空！</h1>
+					<a class=" btn btn-default" href="购物车.html">返回</a>
+				</div>
+			</div>
+
+			<!--   -->
+			<!-- 模态框（Modal） -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">添加产品</h4>
+						</div>
+						<div class="modal-body">
+							<form name="formData" class="form-horizontal" ng-submit="addProduct()">
+								<div class="form-group">
+									<label for="firstname" class="col-sm-2 control-label">产品名字</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="product_name" ng-model="product.name" placeholder="请输入产品名字"> {{product_name}}
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="lastname" class="col-sm-2 control-label">产品单价</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="product_price" ng-model="product.price" placeholder="请输入产品单价">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="lastname" class="col-sm-2 control-label">购买数量</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="product_quantity" ng-model="product.quantity" placeholder="请输入购买数量">
+									</div>
+								</div>
+
+						</div>
+						<div class="modal-footer">
+							<button type="reset" class="btn btn-default">重置</button>
+							<button type="submit" class="btn btn-primary" ng-click="addProduct()" ng-submit="addProduct()" data-dismiss="modal">提交</button>
+							</form>
+						</div>
+
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+			</div>
+			<!--   -->
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		var app = angular.module('myApp', []);
+
+		function randomId() {
+			return Math.round(Math.random() * 100, 3);
+		}
+
+		function getFormData() {
+
+			var product_name = $("#product_name");
+			var product_price = $("#product_price");
+			var product_quantity = $("#product_quantity");
+
+			var procuct = {
+				id: randomId(),
+				name: product_name,
+				quantity: product_quantity,
+				price: product_price
+			};
+
+			return procuct;
+
+			//console.log(product_name.value);
+		}
+
+		getFormData()
+
+		app.factory("carts", function() {
+			return [{
+					id: randomId(),
+					name: "HCE900A01 Q9智能一体机",
+					quantity: "99",
+					price: 4300
+				},
+				{
+					id: randomId(),
+					name: "HCE800B01 H5智能一体机坐便器",
+					quantity: "30",
+					price: 3300
+				}, {
+					id: randomId(),
+					name: "HCE800A01 Q8智能一体机",
+					quantity: "1",
+					price: 23000
+				}, {
+					id: randomId(),
+					name: "HCE800B11  HB浴室柜",
+					quantity: "5",
+					price: 6900
+				}
+			]
+
+		});
+
+		//$scope 称为作用域
+		//ng-bind 和  {{}}会有冲突，不能一起用
+		app.controller('cartControler', function($scope, carts, $http) {
+
+			/*
+			 var app = angular.module('myApp', []);
+			    
+			app.controller('siteCtrl', function($scope, $http) {
+			    $http({
+			        method: 'GET',
+			        url: 'https://www.runoob.com/try/angularjs/data/sites.php'
+			    }).then(function successCallback(response) {
+			            $scope.names = response.data.sites;
+			        }, function errorCallback(response) {
+			            // 请求失败执行代码
+			    });
+			  
+			});
+			 * */
+			/*
+			$http({
+				method: 'POST',
+				url: ''
+			}).then(function successCallback(response) {
+				$scope.product =response.data;
+				$scope.addProduct($scope.product);
+				
+			}, function errorCallback(response) {
+				// 请求失败执行代码
+			});
+			*/
+
+			$scope.carts = carts;
+			/*
+			$scope.carts = [{
+					id: randomId(),
+					name: "HCE900A01 Q9智能一体机",
+					quantity: "99",
+					price: 4300
+				},
+				{
+					id: randomId(),
+					name: "HCE800B01 H5智能一体机坐便器",
+					quantity: "30",
+					price: 3300
+				}, {
+					id: randomId(),
+					name: "HCE800A01 Q8智能一体机",
+					quantity: "1",
+					price: 23000
+				}, {
+					id: randomId(),
+					name: "HCE800B11  HB浴室柜",
+					quantity: "5",
+					price: 6900
+				}
+			]
+			*/
+
+			//计算总价
+			$scope.totalPrice = function() {
+				var all = 0;
+				//angular 自带的循环
+				angular.forEach($scope.carts, function(item) {
+					all += item.quantity * item.price;
+				})
+
+				/*
+				 * 以下循环不行 Cannot read property 'quantity' of undefined"
+				 for(var i =0;i<=$scope.carts.length;i++){
+				 	all+=$scope.carts[i].price*$scope.carts.price;
+				 	
+				 }
+				 */
+				return all;
+			}
+
+			//计算总购买数量
+			$scope.totalNumber = function() {
+				var all = 0;
+				//angular 自带的循环
+				angular.forEach($scope.carts, function(item) {
+					//类型转换
+					all += parseInt(item.quantity);
+				})
+
+				/*
+				 * 以下循环不行 Cannot read property 'quantity' of undefined"
+				 for(var i =0;i<=$scope.carts.length;i++){
+				 	all+=$scope.carts[i].price*$scope.carts.price;
+				 	
+				 }
+				 */
+				return all;
+			}
+
+			//清空购物车
+			$scope.removeCart = function() {
+				if($scope.carts != null) {
+					$scope.carts = [];
+				}
+			}
+
+			//移除操作
+			$scope.remove = function(id) {
+				var index = -1;
+				//angular 的 forEach 方法自带key
+				angular.forEach($scope.carts, function(item, key) {
+					if(item.id == id)
+						index = key;
+				})
+
+				//如果index是-1，表示找不到该item
+				if(index !== -1)
+					//splice(n,m)方法，从第n位开始，删除m位
+					$scope.carts.splice(index, 1);
+			}
+
+			//找一个元素
+			var findIndex = function(id) {
+				var index = -1;
+				//angular 的 forEach 方法自带key,key为数组或对象的当前索引
+				/*
+				 forEach方法可以遍历数组或对象，函数有三个参数为别为：value，key,obj。 
+					1）、value value指当遍历的对象或数组元素当前的值 
+					2)、 key 是对象属性的的key或者数组的索引 
+					3)、 obj obj即被遍历的对象或数组本身 
+				 * */
+				angular.forEach($scope.carts, function(item, key) {
+					if(item.id == id)
+						index = key;
+					return;
+					//console.log(key + ":" + index);
+				})
+
+				return index;
+			}
+
+			//增
+			$scope.add = function(id, method) {
+				var index = -1;
+				//angular 的 forEach 方法自带key,key为数组或对象的当前索引
+				/*
+				 forEach方法可以遍历数组或对象，函数有三个参数为别为：value，key,obj。 
+					1）、value value指当遍历的对象或数组元素当前的值 
+					2)、 key 是对象属性的的key或者数组的索引 
+					3)、 obj obj即被遍历的对象或数组本身 
+				 * */
+				angular.forEach($scope.carts, function(item, key) {
+					if(item.id == id)
+						index = key;
+					//console.log(key + ":" + index);
+				})
+
+				//如果index是-1，表示找不到该item
+				if(index !== -1) {
+					if(method == "del") {
+						if($scope.carts[index].quantity > 0) {
+							--$scope.carts[index].quantity;
+						}
+					} else {
+						if($scope.carts[index].quantity < 100) {
+							++$scope.carts[index].quantity;
+						}
+					}
+				}
+			}
+
+			//删
+			$scope.delete = function(id) {
+				var index = findIndex(id);
+				if($scope.carts[index].quantity > 1) {
+					$scope.add(id, "del");
+				} else {
+					var returnKey = confirm("是否要从购物车删除该商品？");
+					if(returnKey) {
+						$scope.remove(id);
+					}
+				}
+			}
+
+			//
+			$scope.$watch("carts", function(newValue, oldValue) {
+				angular.forEach(newValue, function(item, key) {
+					if(item.quantity < 1) {
+						var returnKey = confirm("是否要从购物车删除该商品？");
+						if(returnKey) {
+							$scope.remove(item.id);
+						} else {
+							item.quantity = oldValue[key].quantity;
+						}
+					}
+					if(item.quantity >= 100) {
+						item.quantity = 100;
+					}
+				})
+			}, true);
+
+			$scope.product = {};
+
+			/*
+		    // 简单的 GET 请求，可以改为 POST
+			$http({
+			    method: 'GET',
+			    url: '/someUrl'
+			}).then(function successCallback(response) {
+			        // 请求成功执行代码
+			    }, function errorCallback(response) {
+			        // 请求失败执行代码
+			});
+			 * */
+			/*
+			$scope.addProduct = function(data) {
+				/*
+				 id: randomId(),
+					name: "HCE900A01 Q9智能一体机",
+					quantity: "99",
+					price: 4300
+				 * */
+
+			//$scope.product = data;
+			/*
+			$scope.carts.push({
+				id: randomId(),
+				name:$scope.product.name,
+				quantity:"20",
+				price:$scope.product.price
+			})
+			*/
+			//console.log($scope.product.name);
+
+			//}  */
+
+			$scope.addProduct = function() {
+				$scope.product = getFormData();
+				$scope.carts.push($scope.product);
+				alert(1111);
+			}
+
+		});
+	</script>
+
+</html>

@@ -1,0 +1,157 @@
+body {
+	background:url(../imgs/bg-top-ten.jpg) repeat-y center 0;
+}
+
+/*nav*/
+#navbar ul li a{
+	color: #666;
+}
+
+#navbar ul li a:hover{
+	color: blue;
+}
+
+/*sale-bangdan*/
+.sale-bangdan{
+	position: absolute;
+	top: 150px;
+	left: 70px;
+} 
+
+ .sale-bangdan .product-right-1{
+ 	 margin-top: 60px;
+     margin-left:90px;
+ }
+ 
+  .sale-bangdan .product-right-1 .number{
+  	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color: #002E64;
+  }
+  
+  .sale-bangdan .product-left-2{
+ 	 margin-top: 60px;
+     margin-left:90px;
+ }
+ 
+  .sale-bangdan .product-left-2 .number{
+  	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color: #002E64;
+  }
+
+.sale-bangdan .product-3{
+	margin-top:10px;
+	margin-left:-100px;
+}
+
+.sale-bangdan .product-3 .number{
+	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color: #00ABE6;
+}
+
+.sale-bangdan .product-4{
+	margin-left:250px;
+	margin-bottom:200px;
+}
+
+.sale-bangdan .product-4 .number{
+	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color: #00ABE6;
+}
+
+.sale-bangdan .product-5{
+	margin-left: -30px;
+	margin-top: 60px;
+}
+
+.sale-bangdan .product-5 .number{
+	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color: #00ABE6;
+}
+
+.sale-bangdan .product-6{
+   margin-top: -510px;
+   margin-left: 350px;
+}
+
+.sale-bangdan .product-6 .number{
+	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color:#CAA977;
+}
+
+.sale-bangdan .product-7{
+  margin-left: 120px;
+  margin-top: -325px;
+}
+
+.sale-bangdan .product-7 .number{
+	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color:#CAA977;
+}
+
+.sale-bangdan .product-8{
+    margin-top: 190px;
+    margin-left: 70px;
+}
+
+.sale-bangdan .product-8 .number{
+	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color:#606EB2;
+}
+
+.sale-bangdan .product-9{
+    margin-left:-120px;
+    margin-top:25px;
+}
+
+.sale-bangdan .product-9 .number{
+	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color:#00A7B5;
+}
+
+.sale-bangdan .product-10{
+
+}
+
+.sale-bangdan .product-10 .number{
+	font-size:50px;
+  	font-family: "微软雅黑";
+  	line-height: 100%;
+	font-weight: 700;
+	color:#606EB2;
+}
+
+/*foot*/
+.sale-footer{
+	position: absolute;
+    top: 4000px;
+    width: 100%;
+}
+	
+

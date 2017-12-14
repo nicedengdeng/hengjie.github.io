@@ -1,0 +1,182 @@
+/* nav */
+
+.container .navbar-nav a {
+	color: #8A8A8E;
+}
+
+.container .navbar-nav a:hover {
+	color: blue;
+	opacity: 0.9;
+}
+
+.e_store_adv .swiper-pagination {
+	color: white;
+}
+
+
+/* tianmao and jingdong */
+
+.taj {
+	width: 100%;
+	background: #F6F6F6;
+	;
+}
+
+.taj div {
+	text-align: center;
+	margin: 20px 0;
+}
+
+
+/* 座便器 */
+
+.e_product-1 {
+	position: relative;
+}
+
+.e_product-1 .p-mask_div {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 80%;
+	height: 100%;
+	background: #475D7E;
+	color: #FEFEFE;
+	opacity: 0;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+}
+
+.e_product-1  .p-mask:hover .p-mask_div {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 80%;
+	height: 100%;
+	background: #475D7E;
+	color: #FEFEFE;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.9;
+}
+
+.e_product-1  .p-mask .p-mask_div .btn {
+	margin: 10px 20px;
+	width: 60%;
+}
+
+.e_product-1 .title {
+	margin-top:-20px;
+	height: 150px;
+	width: 125%;
+	background: #1F4777;
+	color: white;
+	font-family: "微软雅黑";
+}
+
+.e_product-1 .title .btn {
+    margin: 10px;
+    margin-left: 20px;
+}
+
+/*花洒*/
+.e_product-2 {
+	position: relative;
+}
+
+.e_product-2 .p-mask_div {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 80%;
+	height: 100%;
+	background: #475D7E;
+	color: #FEFEFE;
+	opacity: 0;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+}
+
+.e_product-2 .p-mask:hover .p-mask_div {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 80%;
+	height: 100%;
+	background: #475D7E;
+	color: #FEFEFE;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.9;
+}
+
+.e_product-2 .p-mask .p-mask_div .btn {
+	margin: 10px 20px;
+	width: 60%;
+}
+
+.e_product-2 .title {
+	margin-left:-127px;
+	margin-top:-20px;
+	height: 150px;
+	width: 125%;
+	background: #1F4777;
+	color: white;
+	font-family: "微软雅黑";
+}
+
+.e_product-2 .title .btn {
+    margin: 10px;
+    margin-left: 20px;
+}
+
+
+/*浴室柜*/
+.e_product-3 {
+	position: relative;
+}
+
+.e_product-3 .p-mask_div {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 80%;
+	height: 100%;
+	background: #475D7E;
+	color: #FEFEFE;
+	opacity: 0;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+}
+
+.e_product-3 .p-mask:hover .p-mask_div {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 80%;
+	height: 100%;
+	background: #475D7E;
+	color: #FEFEFE;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.9;
+}
+
+.e_product-3 .p-mask .p-mask_div .btn {
+	margin: 10px 20px;
+	width: 60%;
+}
+
+.e_product-3 .title {
+	margin-top:-20px;
+	height: 150px;
+	width: 125%;
+	background: #1F4777;
+	color: white;
+	font-family: "微软雅黑";
+}
+
+.e_product-3 .title .btn {
+    margin: 10px;
+    margin-left: 20px;
+}

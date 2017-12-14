@@ -1,0 +1,133 @@
+/*footer*/
+
+.footer {
+	margin-top: 50px;
+	height: 387px;
+	width: 100%;
+	background: #F6F6F6;
+}
+
+.kuaisu {
+	margin-left: 150px;
+}
+
+.kuaisu ul li {
+	margin: 5px;
+}
+
+.kuaisu ul li a {
+	cursor: pointer;
+	color: #8D898C;
+}
+
+.kuaisu ul li a:hover {
+	color: lightblue;
+	text-decoration: none;
+}
+
+.chanping {
+	margin-left: -80px;
+}
+
+.chanping ul li {
+	margin: 5px;
+}
+
+.chanping ul li a {
+	cursor: pointer;
+	color: #8D898C;
+}
+
+.chanping ul li a:hover {
+	color: lightblue;
+	text-decoration: none;
+}
+
+.roomlist {
+	margin-left: -80px;
+}
+
+.roomlist ul li {
+	margin: 5px;
+}
+
+.roomlist ul li a {
+	cursor: pointer;
+	color: #8D898C;
+}
+
+.roomlist ul li a:hover {
+	color: lightblue;
+	text-decoration: none;
+}
+
+.about {
+	margin-left: -80px;
+}
+
+.about ul li {
+	margin: 5px;
+}
+
+.about ul li a {
+	cursor: pointer;
+	color: #8D898C;
+}
+
+.about ul li a:hover {
+	color: lightblue;
+	text-decoration: none;
+}
+
+.f-icon {
+	position: relative;
+	margin-left: -80px;
+}
+
+.weixin {
+	position: absolute;
+	margin: 5px;
+	height: 23px;
+	width: 23px;
+	background: url(../../index/img/icon-footer-social.png) no-repeat center top;
+	bottom: -5px;
+	right: 30px;
+}
+
+.weibo {
+	position: absolute;
+	margin: 5px;
+	height: 23px;
+	width: 23px;
+	background: url(../../index/img/icon-footer-social.png) no-repeat center 100%;
+	bottom: -5px;
+	right: 60px;
+}
+
+.statement {
+	position: relative;
+}
+
+.statement ul {
+	list-style: none;
+	font-size: 7px;
+}
+
+.statement ul li {
+	float: left;
+	border-right: solid 1px #A9A9A9;
+	margin: 5px;
+}
+
+.statement ul li a {
+	color: #8D898C;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.statement-position {
+	position: absolute;
+	bottom: -370px;
+	left: 500px;
+}

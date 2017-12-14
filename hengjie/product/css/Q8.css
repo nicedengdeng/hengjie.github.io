@@ -1,0 +1,82 @@
+/* nav */
+
+.container .navbar-nav a {
+	color: #8A8A8E;
+}
+
+.container .navbar-nav a:hover {
+	color: blue;
+	opacity: 0.9;
+}
+
+
+/*product introduction*/
+
+.p-indroduction {
+	border-top: double 1px #EEEEEE;
+	margin-top: 80px;
+}
+
+.title a {
+	color: #999999;
+	font-family: "微软雅黑";
+	font-size: 10px;
+}
+
+.title a:hover {
+	color: blue;
+	opacity: 0.7;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: "微软雅黑";
+	font-size: 10px;
+}
+
+.row ul{
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color: #999999;
+}
+
+.row ul li{
+	margin: 5px;
+}
+
+/*  swiper*/
+.swiper-container{
+  width:260px;
+}
+
+.swiper-slide{
+	cursor: pointer;
+}
+
+.swiper-slide:hover{
+	opacity: 0.6;
+	cursor: pointer;
+	border: 10 double blue;
+}
+
+
+/*product_list*/
+
+.product_list .mask {
+	position: relative;
+}
+
+.product_list .mask .mask-div {
+	position: absolute;
+	top: 0;
+	-webkit-transition: opacity ease 1s;
+	transition: opacity ease 1s;
+	opacity: 0;
+}
+
+.product_list .mask:hover .mask-div {
+	position: absolute;
+	top: 0;
+	-webkit-transition: opacity ease 1s;
+	transition: opacity ease 1s;
+	opacity: 1;
+}
+

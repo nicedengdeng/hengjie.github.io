@@ -1,0 +1,57 @@
+/* nav */
+
+.container .navbar-nav a {
+	color: #8A8A8E;
+}
+
+.container .navbar-nav a:hover {
+	color: blue;
+	opacity: 0.9;
+}
+
+.title {
+	margin: 15px;
+	color: #999999;
+}
+
+.title a {
+	color: #999999;
+}
+
+.title a:hover {
+	color: blue;
+	opacity: 0.7;
+	text-decoration: none;
+}
+
+
+/*百度地图引用的css*/
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.iw_poi_title {
+	color: #CC5522;
+	font-size: 14px;
+	font-weight: bold;
+	overflow: hidden;
+	padding-right: 13px;
+	white-space: nowrap
+}
+
+.iw_poi_content {
+	font: 12px arial, sans-serif;
+	overflow: visible;
+	padding-top: 4px;
+	white-space: -moz-pre-wrap;
+	word-wrap: break-word
+}
+
+/*表单样式*/
+
+.form-group select{
+
+}

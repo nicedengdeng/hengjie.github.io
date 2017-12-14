@@ -1,0 +1,142 @@
+
+/*advertisement*/
+.swiper-container-advertisement{
+	position: relative;
+}
+
+.swiper-container-advertisement .swiper-pagination{
+	position: absolute;
+	bottom: 100px;
+}
+
+/*adv-point*/
+.swiper-container-advertisement .point-1{
+	position: absolute;
+	bottom: 100px;
+	left: 230px;
+}
+
+.swiper-container-advertisement .in-hide-1{
+	position: absolute;
+	background: white ;
+	padding: 10px;
+	bottom:40px;
+	left:270px;
+	font: "微软雅黑";
+	opacity: 0.8;
+	display: none;
+	z-index: 1000;
+}
+
+.swiper-container-advertisement .point-2{
+	position: absolute;
+	bottom:190px;
+	left:540px;
+}
+
+.swiper-container-advertisement .in-hide-2{
+	position: absolute;
+	background: white ;
+	padding: 10px;
+	bottom:120px;
+	left:570px;
+	font: "微软雅黑";
+	opacity: 0.8;
+	width:240px;
+	display: none;
+	
+}
+
+.swiper-container-advertisement .point-3{
+	position: absolute;
+	bottom:185px;
+	left:1023px;
+}
+
+.swiper-container-advertisement .in-hide-3{
+	position: absolute;
+	background: white ;
+	padding: 10px;
+	bottom:100px;
+	left:783px;
+	font: "微软雅黑";
+	opacity: 0.8;
+	width:240px;
+	display: none;
+}
+
+.swiper-container-advertisement h3{
+    color: #1F395D;
+}
+
+.swiper-container-advertisement p{
+    color: #8A8C90;
+    font-weight:300;
+    font: "微软雅黑";
+}
+
+/*introduct*/
+
+.introcduct .content h2 {
+	color: #00397C;
+	font-size: 25px;
+}
+
+.introcduct .content h4 {
+	color: #00397C;
+	font-size: 22px
+}
+
+.introcduct .content p {
+	color: #898989;
+	font-family: "微软雅黑";
+	line-height: 22px;
+}
+.introcduct .content .lan{
+	margin-top: 30px;
+}
+
+
+/*btn*/
+
+.introcduct .more {
+	background: #1A355E;
+	color: white;
+	float: right;
+	margin-top: -48px;
+}
+
+
+/*adv*/
+
+.swiper-adv {
+	margin-top: 60px;
+	width: 100%;
+}
+
+.swiper-adv .mask {
+	position: relative;
+}
+
+.swiper-adv .mask .mask-div {
+	width: 100%;
+	height: 100%;
+	background: #1F4777;
+	position: absolute;
+	cursor: pointer;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0.8;
+	pointer-events: none;
+	color: white;
+	text-align: center;
+	font-family: "微软雅黑";
+	line-height:120px;
+}
+
+.swiper-adv .mask:hover .mask-div {
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+	opacity: 0;
+	pointer-events: auto;
+}
